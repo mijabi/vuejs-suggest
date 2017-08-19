@@ -1,3 +1,4 @@
+const browserSync = require('browser-sync');
 const elixir = require('laravel-elixir');
 
 require('laravel-elixir-vue-2');
@@ -15,5 +16,11 @@ require('laravel-elixir-vue-2');
 
 elixir(mix => {
     mix.sass('typeahead_suggestion.scss', 'example/css/style.css')
-     .webpack('app.js','example/js/app.js');
+     .webpack('app.js','example/js/app.js')
+     .browserSync({ online: false, proxy: 'localhost:8000/example/try.html'});
 });
+
+
+// logConnections:  false,
+// reloadOnRestart: true,
+// notify:          true

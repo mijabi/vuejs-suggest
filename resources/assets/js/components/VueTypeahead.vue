@@ -8,6 +8,7 @@
          :placeholder="placeholder"
           >
 </template>
+
 <script>
   var Bloodhound = require('typeahead.js')
   export default {
